@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator BMI/BMR</title>
+    <link rel="stylesheet" type="text/css" href="style.css"></link>
+</head>
+<body> <center>
+
+<h1 style="text-align: center; ">Oblicz swój indeks BMI oraz wylicz zapotrzebowanie kaloryczne (BMR)<br><br></h1>
+
+
+<form action="/bmicalculate">
+    <h1 style="text-align: center; "><b>Podaj swoje dane: </b> </h1>
+    <label>Waga [kg]</label>
+    <input type="number" name="weight"  min="1" max="250"><br>
+    <label>Wzrost[cm]: </label>
+    <input type="number" name="height"  min="1" max="250"><br>
+    <label>Wiek: </label>
+    <input type="number" name="age"  min="1" max="120"><br>
+
+    <input type="radio" name="gender" value="male"> Mężczyzna<br>
+    <input type="radio" name="gender" value="female"> Kobieta<br><br>
+
+    <input type="radio" name="activity" value="lazy"> Brak aktywności, praca siedząca<br>
+    <input type="radio" name="activity" value="low"> Niska aktywność (praca siedząca i 1-2 treningi w tygodniu)<br>
+    <input type="radio" name="activity" value="regular">Średnia aktywność (praca siedząca i treningi 3-4 razy w tygodniu)<br>
+    <input type="radio" name="activity" value="sport"> Wysoka aktywność (praca fizyczna i 3-4 treningi w tygodniu)<br>
+    <input type="radio" name="activity" value="proSport"> Bardzo wysoka aktywność (zawodowi sportowcy, osoby codziennie trenujące)<br>
+
+    <input type="submit" value="Wyślij">
+    <input type="reset" value="Wyczyść dane">
+</form>
+
+    <br><br><br>Tabela wartości dla indeksu BMI:<br>
+    <ul>
+    <li> Poniżej 16 - wygłodzenie</li>
+    <li>16 - 16.99 - wychudzenie</li>
+    <li>17 - 18.49 - niedowaga</li>
+    <li>18.5 - 24.99 - norma</li>
+    <li>25 - 29.99 - nadwaga</li>
+    <li>30 - 34.99 - I stopień otyłości</li>
+    <li>35 - 39.99 - II stopień otyłości</li>
+    <li>powyżej 40 - otyłość skrajna</li>
+        <br><br>
+        Wartość aktywności 	Stopień aktywności<br>
+        1,2 	brak aktywności, praca siedząca<br>
+        1,3-1,4 	niska aktywność (praca siedząca i 1-2 treningi w tygodniu)<br>
+        1,5-1,6 	średnia aktywność (praca siedząca i treningi 3-4 razy w tygodniu)<br>
+        1,7-1,8 	wysoka aktywność (praca fizyczna i 3-4 treningi w tygodniu)<br>
+        1,9-2,2 	bardzo wysoka aktywność (zawodowi sportowcy, osoby codziennie trenujące)<br>
+
+</ul>
+</center>
+</body>
+</html>
+
+
+
